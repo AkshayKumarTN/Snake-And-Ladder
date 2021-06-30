@@ -6,7 +6,7 @@ namespace Snake_And_Ladder
     {
         // Starting position in the game is 0
         //The Player starts from 0 and palys the game till the winning spot 100 is achieved.
-        public const int STAST = 0;
+        public const int START = 0;
         public const int FINISH = 100;
         static void Main(string[] args)
         {
