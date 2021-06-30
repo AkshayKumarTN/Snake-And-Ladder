@@ -6,7 +6,7 @@ namespace Snake_And_Ladder
     {
         // Starting position in the game is 0
         //The Player starts from 0 and palys the game till the winning spot 100 is achieved.
-        public const int STAST = 0;
+        public const int START = 0;
         public const int FINISH = 100;
         public const int NO_PLAY = 0, LADDER = 1, SNAKE = 2;
         public static Random random = new Random();
@@ -53,8 +53,8 @@ namespace Snake_And_Ladder
                 else
                     player_Next_Position = player_position + player_move;
 
-                if (player_Next_Position < STAST)
-                    player_position = STAST;
+                if (player_Next_Position < START)
+                    player_position = START;
                 else
                     player_position = player_Next_Position;
             }
