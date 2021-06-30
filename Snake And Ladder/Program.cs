@@ -38,7 +38,9 @@ namespace Snake_And_Ladder
         {
             Console.WriteLine("Wellcome To Snake and Ladder game.");
             // player initial position
-            int player_position = 0, player_Next_Position; 
+            int player_position = 0, player_Next_Position;
+
+            int dice_roll_count = 0;
             
             //Repeats till the Player reaches the winning position 100.
             while (player_position < FINISH)
@@ -46,8 +48,12 @@ namespace Snake_And_Ladder
                 // player rolls the dice and gets the value
                 int player_Roll_Dice = Roll_Dice();
 
+                // number of times the dice was played is counted
+                dice_roll_count++;
+
                 // The Player then checks for a Option. They are No_Play,Ladder and Snake.
                 int player_move = Player_Move_Option(player_Roll_Dice);
+
                 if (player_position + player_move > FINISH)
                     player_Next_Position = player_position;
                 else
@@ -57,8 +63,13 @@ namespace Snake_And_Ladder
                     player_position = STAST;
                 else
                     player_position = player_Next_Position;
+
+                // Player current position After rolling the Dice
+                Console.WriteLine("Player current position After rolling the Dice is " + player_position);
             }
+            Console.WriteLine();
             Console.WriteLine("Player current position After the game is " + player_position);
+            Console.WriteLine("Total Number of Dice Roll in the game is " + dice_roll_count);
 
         }
        
